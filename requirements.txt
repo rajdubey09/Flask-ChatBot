@@ -1,0 +1,6 @@
+flask
+Gunicorn
+numpy
+nltk
+troch==2.4.1
+torchvision

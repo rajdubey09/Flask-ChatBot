@@ -1,0 +1,4 @@
+1. Theory + NLP Concepts (Stemming, Tokenization, BOW)
+2. Create Training Dataset
+3. PyTorch Model and Training (Deep Learning)
+4. Save/ Load Model and implement Chat Bot

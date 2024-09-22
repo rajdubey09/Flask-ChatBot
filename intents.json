@@ -1,0 +1,71 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thankyou", "Thank you", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "Services",
+      "patterns": [
+        "Your Services",
+        "What services you provide",
+        "list of service"
+      ],
+      "responses": [
+        "1. Web Development 2. SEO 3. Ads 4. ChatBot Services"
+      ]
+    },
+    {
+      "tag": "contacts",
+      "patterns": [
+        "give me your Contact",
+        "Email",
+        "Phone",
+        "Connect",
+        "how can i reach you?"
+      ],
+      "responses": [
+        "Kindly visit link www.abc.com or call us at 9919900990 You can also visit at Abc Colony, Varanasi"
+      ]
+    }
+  ]
+}
