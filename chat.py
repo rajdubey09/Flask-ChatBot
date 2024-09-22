@@ -3,6 +3,7 @@ import json
 import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+import pickle
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -23,6 +24,9 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
+filename = 'model.sav'
+# pickle.dump(model, open(filename, 'wb'))
+
 bot_name = "Chat-Bot"
 
 def get_response(msg):
@@ -31,7 +35,10 @@ def get_response(msg):
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 
-    output = model(X)
+    loaded_model = pickle.load(open(filename, 'rb'))
+    output = loaded_model(X)
+    
+    # output = model(X)
     _, predicted = torch.max(output, dim=1)
 
     tag = tags[predicted.item()]
