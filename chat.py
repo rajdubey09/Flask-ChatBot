@@ -18,11 +18,11 @@ hidden_size = data["hidden_size"]
 output_size = data["output_size"]
 all_words = data['all_words']
 tags = data['tags']
-model_state = data["model_state"]
+# model_state = data["model_state"]
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
-model.eval()
+# model = NeuralNet(input_size, hidden_size, output_size).to(device)
+# model.load_state_dict(model_state)
+# model.eval()
 
 filename = 'model.sav'
 # pickle.dump(model, open(filename, 'wb'))
@@ -50,7 +50,7 @@ def get_response(msg):
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
     
-    return "I do not understand... Try using key words like contact, Payments."
+    return "I do not understand... Try using key words like Contact, Payments."
 
 
 if __name__ == "__main__":
